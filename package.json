@@ -51,9 +51,10 @@
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^3.2.0",
-    "eslint": "^8.14.0",
+    "eslint": "^7.0.0",
     "eslint-config-prettier": "^8.5.0",
-    "husky": "^6.0.0",
-    "prettier": "^2.6.2"
+    "eslint-plugin-import": "^2.25.4",
+    "husky": "^7.0.0",
+    "prettier": "^2.6.0"
   }
 }
