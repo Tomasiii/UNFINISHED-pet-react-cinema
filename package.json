@@ -10,9 +10,15 @@
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.21.1-alpha.4",
+    "@typescript-eslint/parser": "^5.21.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-react": "^7.29.4",
+    "node-sass": "^7.0.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
+    "sass": "^1.51.0",
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
   },
@@ -20,7 +26,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "check-types": "tsc --pretty --noEmit",
+    "format": "prettier --write .",
+    "check-lint": "eslint --fix . --ext ts --ext tsx --ext js",
+    "test-all": "yarn format && yarn check-lint && yarn check-types"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +48,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^3.2.0",
+    "eslint": "^8.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "husky": "^6.0.0",
+    "prettier": "^2.6.2"
   }
 }
