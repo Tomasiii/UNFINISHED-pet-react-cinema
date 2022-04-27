@@ -29,7 +29,8 @@
     "check-types": "tsc --pretty --noEmit",
     "format": "prettier --write .",
     "check-lint": "eslint --fix . --ext ts --ext tsx --ext js",
-    "test-all": "yarn format && yarn check-lint && yarn check-types"
+    "test-all": "yarn format && yarn check-lint && yarn check-types",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -54,7 +55,7 @@
     "eslint": "^7.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.25.4",
-    "husky": "^7.0.0",
-    "prettier": "^2.6.0"
+    "prettier": "^2.6.0",
+    "husky": "^7.0.0"
   }
 }
