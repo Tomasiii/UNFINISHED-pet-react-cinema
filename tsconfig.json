@@ -22,6 +22,7 @@
       "@/components/*": ["components/*"],
       "@/configs/*": ["configs/*"],
       "@/hooks/*": ["hooks/*"],
+      "@/layouts/*": ["layouts/*"],
       "@/pages/*": ["pages/*"],
       "@/providers/*": ["providers/*"],
       "@/services/*": ["services/*"],
@@ -29,5 +30,5 @@
       "@/utils/*": ["utils/*"]
     }
   },
-  "include": ["src"]
+  "include": ["src"],
 }

@@ -6,6 +6,7 @@
   "importOrder": [
     "<THIRD_PARTY_MODULES>",
     "^@/pages/(.*)$",
+    "^@/layouts/(.*)$",
     "^@/components/(.*)$",
     "^@/store/(.*)$",
     "^@/api/(.*)$",
