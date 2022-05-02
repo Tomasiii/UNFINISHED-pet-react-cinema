@@ -1,4 +1,4 @@
-// / <reference types="react-scripts" />
+// / <reference menu.type.ts="react-scripts" />
 declare module "*.scss";
 declare module "*.scss" {
   const content: Record<string, string>;
@@ -7,3 +7,4 @@ declare module "*.scss" {
 declare module "*.gif";
 declare module "*.svg";
 declare module "*.jpg";
+declare module "*.png";

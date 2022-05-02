@@ -1,0 +1,21 @@
+.field{
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  input{
+    padding: 5px 10px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+  }
+  img{
+    height: 30px;
+    width: 30px;
+  }
+}
+
+.errorText{
+  height: 30px;
+  color: red;
+}

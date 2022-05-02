@@ -1,0 +1,31 @@
+.link{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-top: 20px;
+  svg{
+    margin-right: 10px;
+  }
+
+  &:hover{
+    border-right:3px solid red;
+    svg{
+      fill: red;
+    }
+  }
+}
+
+.linkActive{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-top: 20px;
+
+  svg{
+    fill: red;
+
+    margin-right: 10px;
+  }
+}

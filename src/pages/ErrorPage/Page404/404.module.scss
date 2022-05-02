@@ -1,0 +1,50 @@
+.page_404 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+    h1,h2,h3,.link{
+        position: absolute;
+        color: black;
+        left: 50%;
+        transform:translateX(-50%);
+    }
+    h1{
+        top:6.5%;
+        font-size: 110px;
+    }
+    h2{
+        font-size: 40px;
+        top:75%
+    }
+    h3{
+        top:82%;
+        font-size: 25px;
+    }
+
+    img {
+        position: absolute;
+        left: 50%;
+        top:50%;
+        transform:translate(-50%, -50%);
+    }
+
+    .link{
+        display: flex;
+        align-items: center;
+        top: 89%;
+        justify-content: center;
+        height: 70px;
+        width: 130px;
+        color:black;
+        background-color: #65b515;
+        border-radius: 20px;
+        text-decoration: none;
+    }
+}
+
+
+
+

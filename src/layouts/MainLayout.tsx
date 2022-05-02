@@ -1,20 +1,23 @@
+import { memo } from "react";
+import { Outlet } from "react-router-dom";
+
 import Navigation from "@components/Navigation/Navigation";
 import Sidebar from "@components/Sidebar/Sidebar";
+
 import ErrorBoundary from "@hooks/ErrorBoundary/ErrorBoundary";
-import React from "react";
 
-interface IProps {
-  children: JSX.Element;
-}
+import style from "./mainLayout.module.scss";
 
-const MainLayout = ({ children }: IProps) => {
+const MainLayout = () => {
   return (
-    <>
-      <Sidebar />
-      <ErrorBoundary>{children}</ErrorBoundary>
+    <div className={style.main}>
       <Navigation />
-    </>
+      <ErrorBoundary>
+        <Outlet />
+      </ErrorBoundary>
+      <Sidebar />
+    </div>
   );
 };
 
-export default MainLayout;
+export default memo(MainLayout);

@@ -1,7 +1,11 @@
 interface IProps {}
 
 const Sidebar = ({}: IProps) => {
-  return <>Sidebar</>;
+  return (
+    <div>
+      <div>Sidebar</div>
+    </div>
+  );
 };
 
 export default Sidebar;
