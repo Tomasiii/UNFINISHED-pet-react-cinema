@@ -1,21 +1,16 @@
-import { ReactElement, useEffect } from "react";
+import { ReactElement } from "react";
 import { toastr } from "react-redux-toastr";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import isAuth from "@utils/isAuth";
 
-const WithAuth = ({ children }: { children: ReactElement }) => {
+const CheckAuth = ({ children }: { children: JSX.Element }) => {
   const user = isAuth();
   const navigate = useNavigate();
   const location = useLocation();
 
-  useEffect(() => {
-    if (!user) {
-      navigate("/auth", { state: { from: location } });
-    }
-  }, [user]);
-
   if (!user) {
+    navigate("/auth", { state: { from: location } });
     toastr.error("Your must be authorized", "");
     return null;
   }
@@ -23,4 +18,4 @@ const WithAuth = ({ children }: { children: ReactElement }) => {
   return children;
 };
 
-export default WithAuth;
+export default CheckAuth;
