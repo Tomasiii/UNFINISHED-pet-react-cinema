@@ -1,9 +1,12 @@
-interface IProps {}
+import MoviesContainer from "@components/Sidebar/MoviesContainer/MoviesContainer";
 
-const Sidebar = ({}: IProps) => {
+import Search from "./Search/Search";
+
+const Sidebar = () => {
   return (
     <div>
-      <div>Sidebar</div>
+      <Search />
+      <MoviesContainer />
     </div>
   );
 };

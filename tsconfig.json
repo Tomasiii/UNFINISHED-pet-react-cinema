@@ -22,14 +22,14 @@
       "@assets/*": ["assets/*"],
       "@components/*": ["components/*"],
       "@configs/*": ["configs/*"],
-      "@hooks/*": ["hooks/*"],
       "@layouts/*": ["layouts/*"],
       "@pages/*": ["pages/*"],
+      "@hooks/*": ["hooks/*"],
       "@providers/*": ["providers/*"],
       "@services/*": ["services/*"],
       "@store/*": ["store/*"],
       "@utils/*": ["utils/*"],
-      "@types*": ["types"]
+      "@Types/*": ["Types/*"]
     }
   },
   "include": ["src"]

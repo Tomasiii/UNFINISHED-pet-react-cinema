@@ -1,10 +1,10 @@
 import { memo } from "react";
 import { Outlet } from "react-router-dom";
 
-import Navigation from "@components/Navigation/Navigation";
-import Sidebar from "@components/Sidebar/Sidebar";
+import Navigation from "@layouts/../components/Navigation/Navigation";
+import Sidebar from "@layouts/../components/Sidebar/Sidebar";
 
-import ErrorBoundary from "@hooks/ErrorBoundary/ErrorBoundary";
+import ErrorBoundary from "@hooks/../providers/ErrorBoundary/ErrorBoundary";
 
 import style from "./mainLayout.module.scss";
 

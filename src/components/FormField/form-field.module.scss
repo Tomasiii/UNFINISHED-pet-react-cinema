@@ -1,21 +1,39 @@
-.field{
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  input{
-    padding: 5px 10px;
+.title{
+ margin-bottom: 5px;
+}
+
+.field {
+  width: 100%;
+  position: relative;
+
+  input {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    margin: 0 auto;
+
     outline: none;
     border: none;
     border-radius: 10px;
   }
-  img{
+
+  .inputPassword{
+    padding: 10px 11% 10px 10px;
+  }
+
+  .passwordEye {
+    color: black;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2%;
     height: 30px;
     width: 30px;
+    cursor: pointer;
   }
 }
 
-.errorText{
+.errorText {
   height: 30px;
   color: red;
 }

@@ -1,17 +1,17 @@
 import { memo } from "react";
 
-import MaterialIcon from "@components/Navigation/Menu/MenuItem/MaterialIcon";
+import MaterialIcon from "@components/Icon/MaterialIcon";
 import AuthButton from "@components/VideoPlayer/AuthPlaceholder/AuthButton";
 import { IVideoPlayer } from "@components/VideoPlayer/AuthPlaceholder/video.types";
 import { useVideo } from "@components/VideoPlayer/useVideo";
 
-import useAuth from "../../hooks/useAuth";
+import isAuth from "@utils/isAuth";
 
 import style from "./video-player.module.scss";
 
 const VideoPlayer = ({ videoSource, slug }: IVideoPlayer) => {
   const { videoRef, video, actions } = useVideo();
-  const { user } = useAuth();
+  const user = isAuth();
   return (
     <div>
       {user ? (

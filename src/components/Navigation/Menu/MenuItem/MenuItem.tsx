@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-import MaterialIcon from "@components/Navigation/Menu/MenuItem/MaterialIcon";
+import MaterialIcon from "@components/Icon/MaterialIcon";
 import { IMenuItem } from "@components/Navigation/Menu/menu.type";
 
 import style from "./material-item.module.scss";

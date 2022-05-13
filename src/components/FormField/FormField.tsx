@@ -1,8 +1,7 @@
 import { memo, useState } from "react";
 import { useFormContext } from "react-hook-form";
 
-import hidePasswordImg from "@assets/hidePassword.jpg";
-import showPasswordImg from "@assets/showPassword.png";
+import AntIcon from "@components/Icon/AntIcon";
 
 import style from "./form-field.module.scss";
 
@@ -16,34 +15,37 @@ const FormField = ({ name, label }: FormFieldProps) => {
   const [isHidePass, setHidePass] = useState(true);
   return (
     <>
-      <p>{label}</p>
+      <p className={style.title}>{label}</p>
       <div className={style.field}>
         <input
           {...register(name)}
           placeholder={label}
           type={name === "password" && isHidePass ? "password" : "text"}
+          className={name === "password" ? style.inputPassword : ""}
         />
         {name === "password" ? (
           isHidePass ? (
-            <img
+            <AntIcon
+              icon="AiFillEye"
+              className={style.passwordEye}
               onClick={() => setHidePass(false)}
-              src={showPasswordImg}
-              alt=""
             />
           ) : (
-            <img
+            <AntIcon
+              icon="AiFillEyeInvisible"
+              className={style.passwordEye}
               onClick={() => setHidePass(true)}
-              src={hidePasswordImg}
-              alt=""
             />
           )
         ) : null}
       </div>
 
       <div className={style.errorText}>
-        {!!formState.errors[name]?.message
-          ? formState.errors[name]?.message
-          : null}
+        {!!formState.errors[name]?.message ? (
+          <p data-test={"auth-field-error"}>
+            {formState.errors[name]?.message}
+          </p>
+        ) : null}
       </div>
     </>
   );

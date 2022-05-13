@@ -1,23 +1,24 @@
-$bar-width:20%;
-$bord-col:#fff;
+$bar-width: 20%;
+$bord-col: #fff;
 
-.main{
+.main {
   position: relative;
   padding: 0 20% 0 20%;
   color: #fff;
 
-  & > div:first-of-type, & > div:last-of-type{
-    position:fixed;
-    top:0;
+  & > div:first-of-type,
+  & > div:last-of-type {
+    position: fixed;
+    top: 0;
     bottom: 0;
     width: $bar-width;
     max-width: 350px;
-  };
-  & > div:first-of-type{
+  }
+  & > div:first-of-type {
     border-right: 1px solid $bord-col;
     left: 0;
-  };
-  & > div:last-of-type{
+  }
+  & > div:last-of-type {
     border-left: 1px solid $bord-col;
     right: 0;
   }

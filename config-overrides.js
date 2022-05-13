@@ -13,7 +13,7 @@ module.exports = function override(config) {
     "@services": "src/services",
     "@store": "src/store",
     "@utils": "src/utils",
-    "@types": "src/types",
+    "@Types": "src/Types",
   })(config);
 
   return config;

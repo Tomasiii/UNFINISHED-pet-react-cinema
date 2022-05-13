@@ -30,7 +30,7 @@ export const general: IMenu = {
   title: "General",
   items: [
     {
-      icon: "MdLocalFireDepartment",
+      icon: "MdLogin",
       link: "/auth",
       title: "Auth",
     },

@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import 'react-redux-toastr/src/styles/index.scss';
+* {
+  box-sizing: border-box;
+}
+
+html,body {
+  font-family: "Outfit", sans-serif;
+  transition: 0.1s linear all;
+  background-color: #202020;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
