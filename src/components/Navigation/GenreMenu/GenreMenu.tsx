@@ -8,7 +8,9 @@ const GenreMenu = () => {
   return isLoading ? (
     <SkeletonLoader count={4} style={{ marginTop: 7, height: "1.75rem" }} />
   ) : (
-    <Menu data={{ title: "Popular genres", items: data || [] }} />
+    <>
+      <Menu data={{ title: "Popular genres", items: data || [] }} />
+    </>
   );
 };
 

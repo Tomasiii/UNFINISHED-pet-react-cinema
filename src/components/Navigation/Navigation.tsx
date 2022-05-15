@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+import GeneralMenu from "@components/Navigation/GeneralMenu/GeneralMenu";
 import GenreMenu from "@components/Navigation/GenreMenu/GenreMenu";
 import Menu from "@components/Navigation/Menu/Menu";
 import { navGroupData } from "@components/Navigation/Menu/menu.data";
@@ -20,7 +21,7 @@ const Navigation = ({}: IProps) => {
         <div>
           <Menu data={navGroupData.menu} />
           <GenreMenu />
-          <Menu data={navGroupData.general} />
+          <GeneralMenu />
         </div>
       </div>
     </div>

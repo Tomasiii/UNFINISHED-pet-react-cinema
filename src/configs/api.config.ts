@@ -1,4 +1,4 @@
-import { SERVER_URL } from "@api/interseptor";
+export const SERVER_URL = "http://localhost:4200";
 
 export const API_URL = `${SERVER_URL}/api`;
 

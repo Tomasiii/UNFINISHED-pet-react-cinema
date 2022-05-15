@@ -1,27 +1,27 @@
-import Cookies from 'js-cookie'
-import { FC, useEffect } from 'react'
+import Cookies from "js-cookie";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
-import { useActions } from '@hooks/useActions'
+import { useActions } from "@hooks/useActions";
+
 import isAuth from "@utils/isAuth";
-import {useLocation} from "react-router-dom";
 
 const AuthProvider = () => {
-    const  user  = isAuth()
-    const { checkAuth, logout } = useActions()
-    const {pathname} = useLocation();
+  const user = isAuth();
+  const { checkAuth, logout } = useActions();
+  const { pathname } = useLocation();
 
+  useEffect(() => {
+    const accessToken = Cookies.get("accessToken");
+    if (accessToken) checkAuth();
+  }, []);
 
-    useEffect(() => {
-        const accessToken = Cookies.get('accessToken')
-        if (accessToken) checkAuth()
-    }, []) // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => {
+    const refreshToken = Cookies.get("refreshToken");
+    if (!refreshToken && user) logout();
+  }, [pathname]);
 
-    useEffect(() => {
-        const refreshToken = Cookies.get('refreshToken')
-        if (!refreshToken && user) logout()
-    }, [pathname]) // eslint-disable-line react-hooks/exhaustive-deps
+  return null;
+};
 
-    return null
-}
-
-export default AuthProvider
+export default AuthProvider;

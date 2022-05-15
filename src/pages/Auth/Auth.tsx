@@ -2,9 +2,9 @@ import { useCallback, useState } from "react";
 
 import Login from "@pages/Auth/form/Login/Login";
 import Register from "@pages/Auth/form/Register/Register";
+import useAuthRedirect from "@pages/Auth/useAuthRedirect";
 
 import style from "./auth.module.scss";
-import useAuthRedirect from "@pages/Auth/useAuthRedirect";
 
 interface IProps {}
 
@@ -13,7 +13,7 @@ const Auth = ({}: IProps) => {
   const setLogin = useCallback(() => setTypeAuth("login"), []);
   const setRegister = useCallback(() => setTypeAuth("register"), []);
 
-  useAuthRedirect()
+  useAuthRedirect();
 
   return (
     <div className={style.auth}>

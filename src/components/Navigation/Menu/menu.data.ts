@@ -26,18 +26,6 @@ export const menu: IMenu = {
   ],
 };
 
-export const general: IMenu = {
-  title: "General",
-  items: [
-    {
-      icon: "MdLogin",
-      link: "/auth",
-      title: "Auth",
-    },
-  ],
-};
-
 export const navGroupData = {
   menu,
-  general,
 };

@@ -1,17 +1,23 @@
-import React, {useEffect} from 'react';
+import { useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+
 import isAuth from "@utils/isAuth";
-import {useLocation, useNavigate} from "react-router-dom";
+
+type LocationState = {
+  from: string;
+};
 
 const useAuthRedirect = () => {
-    const user = isAuth();
-    const navigate = useNavigate();
-    const {state}  = useLocation();
+  const user = isAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
 
-    useEffect(()=>{
-        if(user){
-            navigate(state === 'string' ? state : '/')
-        }
-    }, [user])
+  const state = location.state as LocationState | null;
+  const from = state?.from ?? "/";
+
+  useEffect(() => {
+    if (user) navigate(from);
+  }, [user]);
 };
 
 export default useAuthRedirect;

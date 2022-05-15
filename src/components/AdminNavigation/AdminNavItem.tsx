@@ -1,24 +1,20 @@
-import cn from 'classnames'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { FC } from 'react'
+import { FC } from "react";
+import { NavLink } from "react-router-dom";
 
-import { INavItem } from './admin-navigation.interface'
-
-import styles from './AdminNavigation.module.scss'
+import styles from "./AdminNavigation.module.scss";
+import { INavItem } from "./admin-navigation.interface";
 
 const AdminNavItem: FC<{ navItem: INavItem }> = ({ navItem }) => {
-	const { asPath } = useRouter()
+  return (
+    <li>
+      <NavLink
+        to={navItem.link}
+        className={({ isActive }) => (isActive ? styles.active : "")}
+      >
+        {navItem.title}
+      </NavLink>
+    </li>
+  );
+};
 
-	return (
-		<li>
-			<Link href={navItem.link}>
-				<a className={cn({ [styles.active]: asPath === navItem.link })}>
-					{navItem.title}
-				</a>
-			</Link>
-		</li>
-	)
-}
-
-export default AdminNavItem
+export default AdminNavItem;

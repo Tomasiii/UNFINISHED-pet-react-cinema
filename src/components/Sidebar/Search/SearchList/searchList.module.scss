@@ -1,41 +1,40 @@
 .list {
-	position: absolute;
-	top: calc(100% + 10px);
-	width: 100%;
-	background-color: lighten(#202020, 7%);
-	border:1px solid grey;
-	border-radius: 10px;
-	z-index: 10;
-	padding: 10px;
+  position: absolute;
+  top: calc(100% + 10px);
+  width: 100%;
+  background-color: lighten(#202020, 7%);
+  border: 1px solid grey;
+  border-radius: 10px;
+  z-index: 10;
+  padding: 10px;
 
-	> a {
-		display: flex;
-		align-items: center;
-		position: relative;
-		padding: 5px;
-		margin: 7px;
-		text-decoration: none;
-		color:inherit;
+  > a {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 5px;
+    margin: 7px;
+    text-decoration: none;
+    color: inherit;
 
+    img {
+      height: 50px;
+      width: 50px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 5px;
+    }
 
-		img {
-			height: 50px;
-			width: 50px;
-			object-fit:cover;
-			object-position:center top;
-			border-radius: 5px;
-		}
-
-		> span {
-			display: block;
-			margin-left:15px;
-			overflow: hidden;
-			text-overflow: ellipsis;
-		}
-		&:hover{
-			>span{
-				margin-left:13px;
-			}
-		}
-	}
+    > span {
+      display: block;
+      margin-left: 15px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    &:hover {
+      > span {
+        margin-left: 13px;
+      }
+    }
+  }
 }
